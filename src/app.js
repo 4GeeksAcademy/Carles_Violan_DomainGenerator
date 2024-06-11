@@ -9,233 +9,87 @@ let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
 
-//document.getElementById("demo").innerHTML = pronoun + adj + noun;
-
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
 };
 
-const domains = [];
-const domainsb = [];
-const domains2 = [];
-const domains2b = [];
-const domains3 = [];
-const domains3b = [];
-const domains4 = [];
-const domains4b = [];
+//we declare function thet receive 3 arrays
+function combineThreeArray(arr1, arr2, arr3) {
+  //declare an empty array to return all combinations
+  const domains = [];
+  let dom = ".com";
 
-// todos los primeros
-
-for (let i = 0; i < 1; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains.push(pronoun[i]);
-
-  for (let j = 0; j < 1; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains.push(adj[j]);
-
-    for (let k = 0; k < 1; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains.push(noun[k] + ".com");
-    }
+  //loop for the first combination
+  for (let i = 0; i < arr1.length; i++) {
+    domains.push(arr1[i] + arr2[i] + arr3[i] + dom);
   }
+  //change order of second array
+  arr2.reverse();
+  //loop for the second combinations
+  for (let i = 0; i < arr1.length; i++) {
+    console.log("entro en primero " + arr1[i]);
+
+    domains.push(arr1[i] + arr2[i] + arr3[i] + dom);
+  }
+  //change order of third array
+  arr3.reverse();
+
+  for (let i = 0; i < arr1.length; i++) {
+    console.log("entro en primero " + arr1[i]);
+
+    domains.push(arr1[i] + arr2[i] + arr3[i] + dom);
+  }
+  //change order of second array again
+  arr2.reverse();
+
+  for (let i = 0; i < arr1.length; i++) {
+    console.log("entro en primero " + arr1[i]);
+
+    domains.push(arr1[i] + arr2[i] + arr3[i] + dom);
+  }
+  //return new array with all combinations
+  return domains;
 }
 
-// todos los segundos
-
-for (let i = 1; i < 2; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domainsb.push(pronoun[i]);
-
-  for (let j = 1; j < 2; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domainsb.push(adj[j]);
-
-    for (let k = 1; k < 2; k++) {
-      // concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domainsb.push(noun[k] + ".com");
-    }
-  }
-}
-
-console.log(domains);
-let text = domains.join(" ");
-let textb = domainsb.join(" ");
-
-/*segunda tanda de fors_ invertimos adj*/
-
-adj.reverse();
-
-console.log("invertimos adj");
-
-for (let i = 0; i < 1; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains2.push(pronoun[i]);
-
-  for (let j = 0; j < 1; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains2.push(adj[j]);
-
-    for (let k = 0; k < 1; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains2.push(noun[k] + ".com");
-    }
-  }
-}
-
-for (let i = 1; i < 2; i++) {
-  // concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains2b.push(pronoun[i]);
-
-  for (let j = 1; j < 2; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains2b.push(adj[j]);
-
-    for (let k = 1; k < 2; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains2b.push(noun[k] + ".com");
-    }
-  }
-}
-
-console.log(domains2);
-
-let text2 = domains2.join(" ");
-let text2b = domains2b.join(" ");
-
-/*tercera tanda de fors_ invertimos noun*/
-noun.reverse();
-
-for (let i = 0; i < 1; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains3.push(pronoun[i]);
-
-  for (let j = 0; j < 1; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains3.push(adj[j]);
-
-    for (let k = 0; k < 1; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains3.push(noun[k] + ".com");
-    }
-  }
-}
-
-for (let i = 1; i < 2; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains3b.push(pronoun[i]);
-
-  for (let j = 1; j < 2; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains3b.push(adj[j]);
-
-    for (let k = 1; k < 2; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains3b.push(noun[k] + ".com");
-    }
-  }
-}
-
-console.log(domains3b);
-let text3 = domains3.join(" ");
-let text3b = domains3b.join(" ");
-
-/* invertimos primer array*/
-
-//pronoun.reverse();
-noun.reverse();
-adj.reverse();
-
-for (let i = 1; i < 2; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains4.push(pronoun[i]);
-
-  for (let j = 1; j < 2; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains4.push(adj[j]);
-
-    for (let k = 0; k < 1; k++) {
-      //concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains4.push(noun[k] + ".com");
-    }
-  }
-}
-
-//
-
-for (let i = 0; i < 1; i++) {
-  //concatenation += pronoun[i] + " ";
-  console.log("entro en primero " + pronoun[i]);
-
-  domains4b.push(pronoun[i]);
-
-  for (let j = 0; j < 1; j++) {
-    //concatenation += adj[j] + " ";
-    console.log("entro en segundo " + adj[j]);
-
-    domains4b.push(adj[j]);
-
-    for (let k = 1; k < 2; k++) {
-      // concatenation += noun[k] + ".com" + " ";
-      console.log("entro en tercero " + noun[k]);
-
-      domains4b.push(noun[k] + ".com");
-    }
-  }
-}
-
-console.log(domains4);
-let text4 = domains4.join(" ");
-let text4b = domains4b.join(" ");
-
-document.getElementById("demo").innerHTML = text;
-document.getElementById("demob").innerHTML = textb;
-document.getElementById("demo2").innerHTML = text2;
-document.getElementById("demo2b").innerHTML = text2b;
-document.getElementById("demo3").innerHTML = text3;
-document.getElementById("demo3b").innerHTML = text3b;
-document.getElementById("demo4").innerHTML = text4;
-document.getElementById("demo4b").innerHTML = text4b;
+//add array to HTML by id and position
+document.getElementById("demo").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[0];
+document.getElementById("demob").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[1];
+document.getElementById("demo2").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[2];
+document.getElementById("demo2b").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[3];
+document.getElementById("demo3").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[4];
+document.getElementById("demo3b").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[5];
+document.getElementById("demo4").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[6];
+document.getElementById("demo4b").innerHTML = combineThreeArray(
+  pronoun,
+  adj,
+  noun
+)[7];
